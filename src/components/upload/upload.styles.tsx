@@ -9,7 +9,6 @@ export const Main = styled.main`
 	-ms-flex: 1;
 	flex: 1;
 	position: relative;
-	height: 100vh;
 	display: flex;
 	justify-content: flex;
 	align-items: center;
@@ -22,6 +21,8 @@ export const Container = styled.div`
 	background-color: #fff;
 	-webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
 	box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+	margin-bottom: 5rem;
+	width: 75rem;
 `;
 
 export const H2Heading = styled.h2`
@@ -47,7 +48,7 @@ export const H2Heading = styled.h2`
 
 export const MainForm = styled.form`
 	margin: 0 auto;
-	max-width: 55rem;
+	max-width: 75rem;
 	width: 100%;
 	background-color: #fff;
 	-webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
@@ -118,11 +119,11 @@ export const LoginButton = styled.button`
 	backface-visibility: hidden;
 	border: none;
 	cursor: pointer;
-	background-color: rgba(30, 39, 73, 0.9);
+	background-color: rgba(30, 39, 73, 1);
 	color: #fff;
 
 	&:hover {
-		background-color: rgba(30, 39, 73, 1);
+		background-color: rgba(30, 39, 73, 0.9);
 		-webkit-transform: translateY(-3px);
 		transform: translateY(-3px);
 		-webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);

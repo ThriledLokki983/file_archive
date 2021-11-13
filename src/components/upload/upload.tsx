@@ -7,6 +7,7 @@ import {
 	FormInput,
 	FormLabel,
 	FormGroup,
+	LoginButton,
 } from "./upload.styles";
 
 /**
@@ -32,6 +33,9 @@ function Upload() {
 					<FormGroup>
 						<FormLabel> Author</FormLabel>
 						<FormInput type="text" placeholder="author" />
+					</FormGroup>
+					<FormGroup>
+						<LoginButton>Upload</LoginButton>
 					</FormGroup>
 				</MainForm>
 			</Main>

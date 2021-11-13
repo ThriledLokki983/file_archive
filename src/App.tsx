@@ -6,13 +6,13 @@ import "./App.css";
 
 // COmponents
 import Upload from "./components/upload/upload";
+import Table from "./components/table/table";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<div className="App">
 			<Upload />
+			<Table />
 		</div>
 	);
 }
