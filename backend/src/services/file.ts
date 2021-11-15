@@ -1,6 +1,6 @@
 /** @format */
 
-import File, { FileDocument } from "../models/file";
+import File, { FileDocument } from "../models/fileModel";
 import { NotFoundError } from "../helpers/apiError";
 
 const create = async (file: FileDocument): Promise<FileDocument> => {

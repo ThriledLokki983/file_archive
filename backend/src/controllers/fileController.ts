@@ -1,7 +1,7 @@
 /** @format */
 
 import { Request, Response, NextFunction } from "express";
-import Files from "../models/file";
+import Files from "../models/fileModel";
 import { BadRequestError } from "../helpers/apiError";
 import FileServices from "../services/file";
 
@@ -39,7 +39,7 @@ export const updateFile = async (req: Request, res: Response, next: NextFunction
 	}
 };
 
-// Delete /videoGames //:videoGamesId
+// Delete  //Id
 export const deleteFile = async (req: Request, res: Response, next: NextFunction) => {
 	try {
 		await FileServices.deleteFile(req.params.fileId);
@@ -53,7 +53,7 @@ export const deleteFile = async (req: Request, res: Response, next: NextFunction
 	}
 };
 
-// GET /videoGames/:videoGamesId
+// GET /Id
 export const findById = async (req: Request, res: Response, next: NextFunction) => {
 	try {
 		res.json(await FileServices.findById(req.params.fileId));
@@ -66,7 +66,7 @@ export const findById = async (req: Request, res: Response, next: NextFunction) 
 	}
 };
 
-// GET / videoGames
+// GET /
 export const findAll = async (req: Request, res: Response, next: NextFunction) => {
 	try {
 		res.json(await FileServices.findAll());

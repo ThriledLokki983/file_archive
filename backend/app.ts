@@ -1,15 +1,21 @@
-import * as express from "express";
-import fileRouter from "./routers/fileRouter";
+/** @format */
 
+import express, { Request, Response, NextFunction } from "express";
+import fileRouter from "./src/routers/fileRouter";
+import dotenv from "dotenv";
+
+dotenv.config({ path: "./config.env" });
 const app = express();
 
-const PORT = 8080;
-
-app.get("/", (req: express.Request, res: express.Response) => {
-  res.setHeader("Content-Type", "text/html");
-  res.end("<h1>Hello World</h1>");
-});
+app.set("port", process.env.PORT || 8080);
 
 app.use("/api/v1/files", fileRouter);
 
-app.listen(PORT, () => console.log(`app running on port ${PORT}`));
+app.listen("port", () => console.log(`app running on port ${process.env.PORT}`));
+
+app.all("*", (req: Request, res: Response, next: NextFunction) => {
+	next(new Error(`Can't find ${req.originalUrl} on this server!`));
+});
+
+// export default app;
+export default app;
