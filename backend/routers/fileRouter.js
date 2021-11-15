@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var file_1 = require("../controllers/file");
+var router = express_1["default"].Router();
+router.get("/", file_1.findAll);
+router.get("/:fileId", file_1.findById);
+router.put("/:fileId", file_1.updateFile);
+router["delete"]("/:fileId", file_1.deleteFile);
+router.post("/", file_1.createFile);
+exports["default"] = router;
