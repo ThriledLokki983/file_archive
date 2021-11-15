@@ -24,7 +24,11 @@ function Upload() {
 				<MainForm>
 					<FormGroup>
 						<FormLabel> Choose file</FormLabel>
-						<FormInput type="file" accept=".jpeg, .xml.,.pdf" />
+						<FormInput
+							type="file"
+							accept=".jpeg, .xml.,.pdf"
+							placeholder="[.pdf, .jpeg, .xml]"
+						/>
 					</FormGroup>
 					<FormGroup>
 						<FormLabel> Description</FormLabel>
